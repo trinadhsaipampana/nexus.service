@@ -17,6 +17,7 @@ ExecStop=/opt/nexus-3.71.0-06/bin/nexus stop
 WantedBy=multi-user.target
 
 After creating the file execute the follwoing commands:
+chmod 777 /etc/systemd/system/nexus.service
 systemctl daemon-reload
 systemclt enable nexus.service
 systemctl status nexus.service
