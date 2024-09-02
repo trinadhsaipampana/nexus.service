@@ -1,18 +1,16 @@
 Manually stop the running nexus by executing following command if it is running:
 sh nexus stop
-Now create a file in /etc/systemd/system as nexus.service with following content:
 
+Now create a file in /etc/systemd/system as nexus.service with following content:
 [Unit]
 Description=nexus service
 After=network.target
-
 [Service]
 Type=forking
 User=root
 Group=root
 ExecStart=/opt/nexus-3.71.0-06/bin/nexus start
 ExecStop=/opt/nexus-3.71.0-06/bin/nexus stop
-
 [Install]
 WantedBy=multi-user.target
 
