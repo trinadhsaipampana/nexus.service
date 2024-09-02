@@ -1,0 +1,25 @@
+To integrate the nexus with maven we need to update the /opt/apache-maven-3.9.9/conf and pom.xml files as follows:
+
+Edit the /opt/apache-maven-3.9.9/conf with following data under <servers> tag as follows:
+<server>
+	<id>nexus-snapshots</id>
+	<username>nexusUSERNAME</username>
+	<password>nexusPASSWORD</password>
+</server>
+<server>
+	<id>nexus-releases</id>
+	<username>nexusUSERNAME</username>
+	<password>nexusPASSWORD</password>
+</server>
+
+Edit the pom.xml file as follows:
+<distributionManagement>
+	<snapshotRepository>
+		<id>nexus-snapshots</id>
+		<url>maven-snapshots URL</url>
+	</snapshotRepository>
+	<repository>
+		<id>nexus-releases</id>
+		<url>maven-releases URL</url>
+	</repository>
+</distributionManagement>
