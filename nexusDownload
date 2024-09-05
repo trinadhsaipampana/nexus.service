@@ -1,6 +1,6 @@
 Download nexus from offical website https://help.sonatype.com/en/download.html in /opt directory
 
-After downloading, navigate to /opt/nexus/bin and execute the following command to start/stop the nexus:
+After downloading, navigate to /opt/nexus-3.71.0-06/bin and execute the following command to start/stop the nexus:
 sh nexus start/stop
 
 Once nexus is running, access the nexus from browser with privateIP:8081
