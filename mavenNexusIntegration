@@ -1,6 +1,6 @@
-To integrate the nexus with maven we need to update the /opt/apache-maven-3.9.9/conf and pom.xml files as follows:
+To integrate the nexus with maven we need to update the /opt/apache-maven-3.9.9/conf/settings.xml and pom.xml files as follows:
 
-Edit the /opt/apache-maven-3.9.9/conf with following data under <servers> tag as follows:
+Edit the /opt/apache-maven-3.9.9/conf/settings.xml with following data under <servers> tag as follows:
 <server>
 	<id>nexus-snapshots</id>
 	<username>nexusUSERNAME</username>
